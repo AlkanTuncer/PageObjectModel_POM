@@ -1,6 +1,19 @@
-package tests.day22_;
+package tests.day22;
 
-public class C00_POMText {
+import org.testng.annotations.Test;
+import pages.AmazonPage;
+import utilities.ConfigurationReader;
+import utilities.Driver;
+
+public class AmazonAramaTest {
+
+    AmazonPage amazonPage = new AmazonPage();
+
+    @Test
+    public void test(){
+        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+        amazonPage.aramaKutusu.sendKeys("Manchester City new season jersey");
+    }
 
     /*
                       PAGE OBJECT MODEL
