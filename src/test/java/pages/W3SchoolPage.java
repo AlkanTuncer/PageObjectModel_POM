@@ -12,7 +12,7 @@ public class W3SchoolPage {
     }
 
     @FindBy(tagName = "h1")
-    public WebElement titleHtml;
+    public WebElement htmlTables;
 
     @FindBy(xpath = "//*[@id=\"main\"]/div[2]/a[2]")
     public WebElement next;

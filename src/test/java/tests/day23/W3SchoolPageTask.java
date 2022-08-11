@@ -24,12 +24,14 @@ public class W3SchoolPageTask {
     public void test(){
         Driver.getDriver().get(ConfigurationReader.getProperty("taskUrl"));
 
-        Assert.assertTrue(w3SchoolPage.titleHtml.isDisplayed(),"HTML Titles yazısı görünmüyor.");
+        Assert.assertTrue(w3SchoolPage.htmlTables.isDisplayed(),"HTML Titles yazısı görünmüyor.");
+        System.out.println("Html Tables Text : "+w3SchoolPage.htmlTables.getText());
 
         w3SchoolPage.next.click();
 
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(w3SchoolPage.borders.isDisplayed(),"HTML Table Borders yazısı vardır.");
+        System.out.println("Html Borders Text : "+w3SchoolPage.borders.getText());
 
         Driver.closeDriver();
 
