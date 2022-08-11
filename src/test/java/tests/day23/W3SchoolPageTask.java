@@ -3,11 +3,11 @@ package tests.day23;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import pages.HTMLTablesPage;
+import pages.W3SchoolPage;
 import utilities.ConfigurationReader;
 import utilities.Driver;
 
-public class HtmlTablesTask {
+public class W3SchoolPageTask {
 
     /*
         https://www.w3schools.com/html/html_tables.asp
@@ -18,18 +18,18 @@ public class HtmlTablesTask {
         HTML Table Borders olduğu doğrulansın.
      */
 
-    HTMLTablesPage htmlTablesPage = new HTMLTablesPage();
+    W3SchoolPage w3SchoolPage = new W3SchoolPage();
 
     @Test
     public void test(){
         Driver.getDriver().get(ConfigurationReader.getProperty("taskUrl"));
 
-        Assert.assertTrue(htmlTablesPage.titleHtml.isDisplayed(),"HTML Titles yazısı görünmüyor.");
+        Assert.assertTrue(w3SchoolPage.titleHtml.isDisplayed(),"HTML Titles yazısı görünmüyor.");
 
-        htmlTablesPage.next.click();
+        w3SchoolPage.next.click();
 
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(htmlTablesPage.borders.isDisplayed(),"HTML Table Borders yazısı vardır.");
+        softAssert.assertTrue(w3SchoolPage.borders.isDisplayed(),"HTML Table Borders yazısı vardır.");
 
         Driver.closeDriver();
 

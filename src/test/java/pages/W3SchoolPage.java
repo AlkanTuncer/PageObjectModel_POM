@@ -5,9 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class HTMLTablesPage {
+public class W3SchoolPage {
 
-    public HTMLTablesPage(){
+    public W3SchoolPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
