@@ -1,6 +1,7 @@
 package tests.day22;
 
 import org.openqa.selenium.Keys;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AmazonPage;
 import utilities.ConfigurationReader;
@@ -14,6 +15,9 @@ public class AmazonAramaTest {
     public void test(){
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         amazonPage.aramaKutusu.sendKeys("Manchester City", Keys.ENTER);
+        amazonPage.ilkUrun.click();
+
+        Assert.assertTrue(Driver.getDriver().getTitle().contains("Manchester City"),"Başlık 'Manchester City' içermiyor.");
 
         Driver.closeDriver();
     }
