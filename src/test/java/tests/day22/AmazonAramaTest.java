@@ -14,6 +14,7 @@ public class AmazonAramaTest {
     public void test(){
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         amazonPage.aramaKutusu.sendKeys("Manchester City", Keys.ENTER);
+
         Driver.closeDriver();
     }
 
