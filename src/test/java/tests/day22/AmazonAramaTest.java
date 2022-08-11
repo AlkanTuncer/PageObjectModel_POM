@@ -13,7 +13,8 @@ public class AmazonAramaTest {
     @Test
     public void test(){
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
-        amazonPage.aramaKutusu.sendKeys("Manchester City new season jersey", Keys.ENTER);
+        amazonPage.aramaKutusu.sendKeys("Manchester City", Keys.ENTER);
+        Driver.closeDriver();
     }
 
     /*
