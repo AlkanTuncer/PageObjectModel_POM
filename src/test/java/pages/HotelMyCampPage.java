@@ -26,4 +26,7 @@ public class HotelMyCampPage {
     @FindBy(className = "validation-summary-errors")
     public WebElement wrongDataText;
 
+    @FindBy(xpath = "//*[text()=\"ListOfUsers\"]")
+    public WebElement listOfUsers;
+
 }
