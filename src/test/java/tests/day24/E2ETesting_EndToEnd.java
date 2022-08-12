@@ -32,10 +32,13 @@ public class E2ETesting_EndToEnd {
     public void createHotel(){
         Driver.getDriver().get(ConfigurationReader.getProperty("urlHMC"));
 
-        hotelMyCampPage.logInButton.click();
-        hotelMyCampPage.username.sendKeys(ConfigurationReader.getProperty("HMCValidUsername"));
-        hotelMyCampPage.password.sendKeys(ConfigurationReader.getProperty("HMCValidPassword"));
-        hotelMyCampPage.btnSubmit.click();
+        //hotelMyCampPage.logInButton.click();
+        //hotelMyCampPage.username.sendKeys(ConfigurationReader.getProperty("HMCValidUsername"));
+        //hotelMyCampPage.password.sendKeys(ConfigurationReader.getProperty("HMCValidPassword"));
+        //hotelMyCampPage.btnSubmit.click();
+        // Yukardaki kısım yerine page sayfamızda olusturdugumuz login metotunu kullanabiliriz.
+
+        hotelMyCampPage.login();
 
         hotelMyCampPage.hotelManagement.click();
         hotelMyCampPage.hotelList.click();

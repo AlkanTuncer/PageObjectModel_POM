@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utilities.ConfigurationReader;
 import utilities.Driver;
 
 public class HotelMyCampPage {
@@ -52,5 +53,15 @@ public class HotelMyCampPage {
 
     @FindBy(xpath = "//button[@data-bb-handler=\"ok\"]")
     public WebElement okButton;
+
+
+    public void login(){
+        Driver.getDriver().get(ConfigurationReader.getProperty("urlHMC"));
+        logInButton.click();
+        username.sendKeys(ConfigurationReader.getProperty("HMCValidUsername"));
+        password.sendKeys(ConfigurationReader.getProperty("HMCValidPassword"));
+        btnSubmit.click();
+
+    }
 
 }
