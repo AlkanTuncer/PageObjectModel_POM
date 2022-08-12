@@ -1,7 +1,6 @@
 package tests.day24.smoketest;
 
 import org.openqa.selenium.Keys;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.HotelMyCampPage;
@@ -13,7 +12,7 @@ public class NegativeLoginTest {
     // 3 Farkli test Methodunda 3 senaryoyu test et
     //                - yanlisSifre
     //                - yanlisKulllanici
-    //                - yanlisSifreKullanici
+    //                - yanlisSifreVeKullanici
     // https://www.hotelmycamp.com/ adresine git
     // test data yanlis username: manager1 , yanlis password : manager1
 
@@ -50,7 +49,7 @@ public class NegativeLoginTest {
     }
 
     @Test
-    public void wrongPasswordUsername(){
+    public void wrongUsernameAndPassword(){
         Driver.getDriver().get(ConfigurationReader.getProperty("urlHMC"));
 
         hotelMyCampPage.logInButton.click();
