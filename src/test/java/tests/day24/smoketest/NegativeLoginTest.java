@@ -24,13 +24,13 @@ public class NegativeLoginTest {
 
         hotelMyCampPage.logInButton.click();
         hotelMyCampPage.username.sendKeys(ConfigurationReader.getProperty("HMCValidUsername"));
-        hotelMyCampPage.password.sendKeys(ConfigurationReader.getProperty("HMCWrongPassword"), Keys.ENTER);
+        hotelMyCampPage.password.sendKeys(ConfigurationReader.getProperty("HMCWrongPassword"));
+        hotelMyCampPage.btnSubmit.click();
 
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(hotelMyCampPage.wrongDataText.isDisplayed());
         softAssert.assertAll();
 
-        Driver.closeDriver();
     }
 
     @Test
@@ -39,13 +39,13 @@ public class NegativeLoginTest {
 
         hotelMyCampPage.logInButton.click();
         hotelMyCampPage.username.sendKeys(ConfigurationReader.getProperty("HMCWrongUsername"));
-        hotelMyCampPage.password.sendKeys(ConfigurationReader.getProperty("HMCValidPassword"),Keys.ENTER);
+        hotelMyCampPage.password.sendKeys(ConfigurationReader.getProperty("HMCValidPassword"));
+        hotelMyCampPage.btnSubmit.click();
 
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(hotelMyCampPage.wrongDataText.isDisplayed());
         softAssert.assertAll();
 
-        Driver.closeDriver();
     }
 
     @Test
@@ -54,13 +54,13 @@ public class NegativeLoginTest {
 
         hotelMyCampPage.logInButton.click();
         hotelMyCampPage.username.sendKeys(ConfigurationReader.getProperty("HMCWrongUsername"));
-        hotelMyCampPage.password.sendKeys(ConfigurationReader.getProperty("HMCWrongPassword"),Keys.ENTER);
+        hotelMyCampPage.password.sendKeys(ConfigurationReader.getProperty("HMCWrongPassword"));
+        hotelMyCampPage.btnSubmit.click();
 
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(hotelMyCampPage.wrongDataText.isDisplayed());
         softAssert.assertAll();
 
-        Driver.closeDriver();
     }
 
 

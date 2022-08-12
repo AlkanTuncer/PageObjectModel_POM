@@ -20,7 +20,10 @@ public class HotelMyCampPage {
     @FindBy(id = "Password")
     public WebElement password;
 
-    @FindBy(xpath = "//li[text()=\"Username or password is incorrect, please correct them and try again\"]")
+    @FindBy(id = "btnSubmit")
+    public WebElement btnSubmit;
+
+    @FindBy(className = "validation-summary-errors")
     public WebElement wrongDataText;
 
 }
