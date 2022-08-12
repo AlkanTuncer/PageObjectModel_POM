@@ -3,6 +3,7 @@ package tests.day24.smoketest;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import pages.HotelMyCampPage;
 import utilities.ConfigurationReader;
 import utilities.Driver;
@@ -26,7 +27,9 @@ public class NegativeLoginTest {
         hotelMyCampPage.username.sendKeys(ConfigurationReader.getProperty("HMCValidUsername"));
         hotelMyCampPage.password.sendKeys(ConfigurationReader.getProperty("HMCWrongPassword"), Keys.ENTER);
 
-        Assert.assertTrue(hotelMyCampPage.wrongDataText.getText().contains("Try again please"),"Test FAILED - Password yanlış girilmedi.");
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertTrue(hotelMyCampPage.wrongDataText.isDisplayed());
+        softAssert.assertAll();
 
         Driver.closeDriver();
     }
@@ -39,7 +42,9 @@ public class NegativeLoginTest {
         hotelMyCampPage.username.sendKeys(ConfigurationReader.getProperty("HMCWrongUsername"));
         hotelMyCampPage.password.sendKeys(ConfigurationReader.getProperty("HMCValidPassword"),Keys.ENTER);
 
-        Assert.assertTrue(hotelMyCampPage.wrongDataText.getText().contains("Try again please"),"Test FAILED - Username yanlış girilmedi.");
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertTrue(hotelMyCampPage.wrongDataText.isDisplayed());
+        softAssert.assertAll();
 
         Driver.closeDriver();
     }
@@ -52,7 +57,9 @@ public class NegativeLoginTest {
         hotelMyCampPage.username.sendKeys(ConfigurationReader.getProperty("HMCWrongUsername"));
         hotelMyCampPage.password.sendKeys(ConfigurationReader.getProperty("HMCWrongPassword"),Keys.ENTER);
 
-        Assert.assertTrue(hotelMyCampPage.wrongDataText.getText().contains("Try again please"),"Test FAILED - Username/Password yanlış girilmedi.");
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertTrue(hotelMyCampPage.wrongDataText.isDisplayed());
+        softAssert.assertAll();
 
         Driver.closeDriver();
     }
