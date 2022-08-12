@@ -19,7 +19,7 @@ public class NegativeLoginTest {
     HotelMyCampPage hotelMyCampPage = new HotelMyCampPage();
 
     @Test
-    public void yanlisSifre(){
+    public void wrongPassword(){
         Driver.getDriver().get(ConfigurationReader.getProperty("urlHMC"));
 
         hotelMyCampPage.logInButton.click();
@@ -32,7 +32,7 @@ public class NegativeLoginTest {
     }
 
     @Test
-    public void yanlisKullanici(){
+    public void wrongUsername(){
         Driver.getDriver().get(ConfigurationReader.getProperty("urlHMC"));
 
         hotelMyCampPage.logInButton.click();
@@ -45,7 +45,7 @@ public class NegativeLoginTest {
     }
 
     @Test
-    public void yanlisSifreKullanici(){
+    public void wrongPasswordUsername(){
         Driver.getDriver().get(ConfigurationReader.getProperty("urlHMC"));
 
         hotelMyCampPage.logInButton.click();
