@@ -1,6 +1,6 @@
 package tests.day24;
 
-public class A_Review {
+public class Review {
 
     /*
                     POM - Page Object Model

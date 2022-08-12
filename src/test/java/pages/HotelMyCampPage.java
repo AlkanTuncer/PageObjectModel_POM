@@ -29,4 +29,28 @@ public class HotelMyCampPage {
     @FindBy(xpath = "//*[text()=\"ListOfUsers\"]")
     public WebElement listOfUsers;
 
+    @FindBy(xpath = "//*[text()=\"Hotel Management\"]")
+    public WebElement hotelManagement;
+
+    @FindBy(xpath = "/html/body/div[3]/div[1]/div/ul/li[3]/ul/li[2]/ul/li[1]/a")
+    public WebElement hotelList;
+
+    @FindBy(xpath = "//span[@class=\"hidden-480\"]")
+    public WebElement addHotel;
+
+    @FindBy(xpath = "//input[@id=\"Code\"]")
+    public WebElement codeCreateHotel;
+
+    @FindBy(xpath = "//select[@id=\"IDGroup\"]")
+    public WebElement selectIDGroup;
+
+    @FindBy(xpath = "//button[@id=\"btnSubmit\"]")
+    public WebElement saveButton;
+
+    @FindBy(xpath = "//div[@class=\"bootbox-body\"]")
+    public WebElement successCreateHotel;
+
+    @FindBy(xpath = "//button[@data-bb-handler=\"ok\"]")
+    public WebElement okButton;
+
 }
