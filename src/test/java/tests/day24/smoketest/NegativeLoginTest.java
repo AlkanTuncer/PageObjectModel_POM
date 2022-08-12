@@ -61,6 +61,7 @@ public class NegativeLoginTest {
         softAssert.assertTrue(hotelMyCampPage.wrongDataText.isDisplayed());
         softAssert.assertAll();
 
+        Driver.closeDriver();
     }
 
 
