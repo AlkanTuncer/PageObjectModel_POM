@@ -1,7 +1,6 @@
 package tests.day24;
 
 import com.github.javafaker.Faker;
-import org.checkerframework.checker.units.qual.A;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
