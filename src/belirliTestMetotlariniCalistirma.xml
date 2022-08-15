@@ -4,9 +4,17 @@
         <classes>
             <class name="tests.day24.smoketest.NegativeLoginTest">
                 <methods>
-                    <exclude name="wrongUsernameAndPassword"></exclude>   <!-- exclude : o metotu dahil etme -->
-                </methods>                                                <!-- include : sadece belirlenen metotları çalıstır. -->
+                    <exclude name="wrongUsernameAndPassword"></exclude>
+                </methods>
+            </class>
+            <class name="tests.day25.C001_LoremTest">
+                <methods>
+                    <exclude name="testLorem2"></exclude>
+                </methods>
             </class>
         </classes>
     </test>
 </suite>
+
+        <!-- exclude : o metotu dahil etme -->
+        <!-- include : sadece belirlenen metotları çalıstır. -->
