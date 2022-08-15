@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="day25_ Methods">
-    <test name="istenmeyen metot">
+    <test name="istenmeyen metot - exclude">
         <classes>
             <class name="tests.day24.smoketest.NegativeLoginTest">
                 <methods>
