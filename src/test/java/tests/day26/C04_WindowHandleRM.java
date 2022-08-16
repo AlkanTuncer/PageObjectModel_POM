@@ -48,6 +48,8 @@ public class C04_WindowHandleRM {
         ReusableMethods.switchToWindow("New Window");
         Assert.assertEquals(Driver.getDriver().getTitle(),"New Window","Test FAILED - Title is not 'New Window'");
 
+        Driver.closeDriver();
+
     }
 
 }
