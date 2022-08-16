@@ -19,7 +19,7 @@ import java.util.function.Function;
 
 public class ReusableMethods {
 
-    public static String getScreenshot(String name) {
+    public static String takeScreenshot(String name) {
         String date = new SimpleDateFormat("yyyyMMddhhss").format(new Date());
         TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
         File source = ts.getScreenshotAs(OutputType.FILE);
