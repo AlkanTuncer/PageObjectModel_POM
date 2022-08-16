@@ -1,10 +1,23 @@
 package utilities;
 
-public class TestBaseRapor {}
-/*
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class TestBaseRapor {
+
     protected static ExtentReports extentReports; //extent report'a ilk atamayi yapar
     protected static ExtentTest extentTest; // test pass veya failed gibi bilgileri kaydeder. Ayrica ekran resmi icin de kullaniriz
     protected static ExtentHtmlReporter extentHtmlReporter; // Html raporu duzenler
+
     // Test işlemine başlamadan hemen önce (test methodundan önce değil, tüm test işleminden önce)
     @BeforeTest(alwaysRun = true) // alwaysRun : her zaman çalıştır.
     public void setUpTest() {
@@ -22,6 +35,7 @@ public class TestBaseRapor {}
         extentHtmlReporter.config().setDocumentTitle("Son Test");
         extentHtmlReporter.config().setReportName("Bu rapor çok önemli");
     }
+
     // Her test methodundan sonra eğer testte hata varsa, ekran görüntüsü alıp rapora ekliyor
     @AfterMethod(alwaysRun = true)
     public void tearDownMethod(ITestResult result) throws IOException {
@@ -35,6 +49,7 @@ public class TestBaseRapor {}
         }
         Driver.closeDriver();
     }
+
     // Raporlandırmayı sonlandırmak icin
     @AfterTest(alwaysRun = true)
     public void tearDownTest() {
@@ -42,4 +57,3 @@ public class TestBaseRapor {}
     }
 
 }
-*/
