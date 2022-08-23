@@ -10,9 +10,9 @@ import org.openqa.selenium.safari.SafariDriver;
 
 import java.time.Duration;
 
-public class CrossDriver {
+public class DriverCross {
 
-    private CrossDriver(){}
+    private DriverCross(){}
 
     public static WebDriver driver;
 

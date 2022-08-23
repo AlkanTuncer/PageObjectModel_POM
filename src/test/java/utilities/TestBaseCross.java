@@ -15,14 +15,14 @@ public class TestBaseCross {
     @Parameters("browser")
     @BeforeMethod
     public void setUp(@Optional String browser) {
-        driver = CrossDriver.getDriver(browser);
+        driver = DriverCross.getDriver(browser);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
     }
 
     @AfterMethod
     public void teardown(){
-        CrossDriver.closeDriver();
+        DriverCross.closeDriver();
     }
 
 }
