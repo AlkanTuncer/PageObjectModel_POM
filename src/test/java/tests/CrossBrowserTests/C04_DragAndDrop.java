@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import utilities.Driver;
+import utilities.TestBaseCross;
 
-public class C04_DragAndDrop {
+public class C04_DragAndDrop extends TestBaseCross {
 
     // https://demoqa.com/droppable adresine gidelim
     // “Drag me” butonunu tutup “Drop here” kutusunun ustune birakalim
@@ -15,12 +15,12 @@ public class C04_DragAndDrop {
 
     @Test
     public void test(){
-        Driver.getDriver().get("https://demoqa.com/droppable");
+        driver.get("https://demoqa.com/droppable");
 
-        Actions actions = new Actions(Driver.getDriver());
+        Actions actions = new Actions(driver);
 
-        WebElement dragMe = Driver.getDriver().findElement(By.xpath("//div[@id=\"draggable\"]"));
-        WebElement dropHere = Driver.getDriver().findElement(By.xpath("//div[@id=\"droppable\"]"));
+        WebElement dragMe = driver.findElement(By.xpath("//div[@id=\"draggable\"]"));
+        WebElement dropHere = driver.findElement(By.xpath("//div[@id=\"droppable\"]"));
 
         actions.dragAndDrop(dragMe,dropHere).perform();
 
