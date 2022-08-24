@@ -1,6 +1,6 @@
 package tests.DataProviderDDT_DataDrivenTest;
 
-public class DataProviderText {
+public class C00_DataProviderText {
 
     /*
           - @DataProvider bir TestNG annotation'idir.
