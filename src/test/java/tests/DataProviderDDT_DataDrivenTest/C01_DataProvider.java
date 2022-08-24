@@ -10,8 +10,8 @@ import utilities.Driver;
 
 public class C01_DataProvider {
 
-    @DataProvider(name = "arananlarListesi")
-    public static Object[][] dataProviderMethod() {
+    @DataProvider
+    public static Object[][] arananlarListesi() {
         String[][] aranacaklar = {{"Arrow"},{"Java"},{"Flutter"},{"Appium"}};
         return aranacaklar;
     }
