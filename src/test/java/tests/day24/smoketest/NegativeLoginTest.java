@@ -38,13 +38,14 @@ public class NegativeLoginTest {
         Driver.getDriver().get(ConfigurationReader.getProperty("urlHMC"));
 
         hotelMyCampPage.logInButton.click();
-        hotelMyCampPage.username.sendKeys(ConfigurationReader.getProperty("HMCWrongUsername"));
+        hotelMyCampPage.username.sendKeys(ConfigurationReader.getProperty("HMCValidUsername"));
         hotelMyCampPage.password.sendKeys(ConfigurationReader.getProperty("HMCValidPassword"));
         hotelMyCampPage.btnSubmit.click();
 
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(hotelMyCampPage.wrongDataText.isDisplayed());
         softAssert.assertAll();
+
 
     }
 
