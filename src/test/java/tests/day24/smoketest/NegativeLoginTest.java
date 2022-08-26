@@ -38,7 +38,7 @@ public class NegativeLoginTest {
         Driver.getDriver().get(ConfigurationReader.getProperty("urlHMC"));
 
         hotelMyCampPage.logInButton.click();
-        hotelMyCampPage.username.sendKeys(ConfigurationReader.getProperty("HMCValidUsername"));
+        hotelMyCampPage.username.sendKeys(ConfigurationReader.getProperty("HMCWrongUsername"));
         hotelMyCampPage.password.sendKeys(ConfigurationReader.getProperty("HMCValidPassword"));
         hotelMyCampPage.btnSubmit.click();
 
